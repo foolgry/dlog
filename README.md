@@ -15,11 +15,29 @@ dlog 是一个命令行工具，用于查看远程 Docker Swarm 服务的日志�
 
 确保系统已安装 Python 3 和 SSH 客户端。
 
+有两种方式可以使用 dlog：
+
+### 方式一：复制到系统 PATH 路径
+
 将 `dlog.py` 脚本复制到系统 PATH 路径中，例如 `/usr/local/bin/dlog`，并确保其具有可执行权限：
 
 ```bash
 chmod +x dlog.py
 sudo cp dlog.py /usr/local/bin/dlog
+```
+
+### 方式二：使用别名（alias）
+
+在您的 shell 配置文件（如 `~/.bashrc`、`~/.zshrc` 等）中添加别名：
+
+```bash
+alias dlog='/path/to/dlog.py'
+```
+
+然后重新加载配置文件：
+
+```bash
+source ~/.bashrc  # 或 source ~/.zshrc
 ```
 
 ## 配置
