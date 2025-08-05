@@ -10,7 +10,9 @@ from configparser import ConfigParser
 from pathlib import Path
 
 # --- Configuration ---
-CONFIG_FILE = Path("dlog.conf")
+# 使用脚本所在目录的 dlog.conf 文件
+SCRIPT_DIR = Path(__file__).parent.resolve()
+CONFIG_FILE = SCRIPT_DIR / "dlog.conf"
 COLOR_YELLOW = '\033[93m'
 COLOR_RED = '\033[91m'
 COLOR_RESET = '\033[0m'
